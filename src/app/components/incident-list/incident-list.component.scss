@@ -1,0 +1,58 @@
+.incident-container {
+  background-color: #2c3034;
+  color: white;
+  font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+.desktop-table {
+  display: none;
+
+  @media screen and (min-width: 600px) {
+    display: table;
+  }
+}
+
+.incident-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+
+.incident {
+  display: flex;
+  border-top: 1px solid #616161;
+  padding: 10px;
+
+  &:hover {
+    background-color: black;
+  }
+
+  .incident-img {
+    width: 40px;
+    flex-shrink: 0;
+  }
+
+  .incident-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+
+    div {
+      margin-bottom: 10px;
+    }
+  }
+}
